@@ -1,0 +1,32 @@
+/** ProyectoPrueba1 Victor Cruz */
+object empleado{
+	
+	var dinero = 0
+	var trabajosXRango = 0
+	var rangoEmpresa = 1
+	
+	method cuantoGanaste() {
+		console.println("He ganado $" + dinero)
+	}
+	
+	method tuRango() {
+		console.println("Mi rango es " + rangoEmpresa)
+	}
+	
+	method teEncargoTrabajar(paga) {
+		dinero += paga * rangoEmpresa
+		trabajosXRango += 1
+	}
+	
+	method reporteTrabajos() {
+		console.println("He hecho " + trabajosXRango + " trabajo/s")
+		if (trabajosXRango > 3) {
+			console.println("Quiero un Ascenso!")
+		}
+	}
+	
+	method teAsciendo() {
+		rangoEmpresa += 1
+		trabajosXRango = 0
+	}
+}
